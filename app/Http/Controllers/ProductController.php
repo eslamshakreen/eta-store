@@ -53,7 +53,7 @@ class ProductController extends Controller
 
     public function edit_product($id){
         $p = Product::find($id);
-        $cats = category::all();
+        $cats = Product::all();
         return view('products/edit')->with('product',$p)->with('categories',$cats);
     }
 
